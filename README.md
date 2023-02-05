@@ -2,7 +2,7 @@
 
 ## Overview
 
-A data visualization and analysis project on the movies and tv serieses with more than 100,000 votes on the IMDB website. 
+A data visualization and analysis project on the movies and tv series with more than 100,000 votes on the IMDB website. 
 
 ## Data Collection
 
@@ -27,9 +27,9 @@ Tableau was used to create five different visualizations and a dashboard. The fo
 1. Number of Movies and TV Series: This visualization shows the count of movies and TV series in the data.
 2. Genres and their Percentage: This visualization shows the  genres presented in the data and their percentage values.
 3. Comparison of Ratings Among Popular Genres: This visualization compares the ratings of the most popular genres in the data.
-4. Rating Distribution in Movies: This visualization shows the distribution of ratings of the most popular titles on the IMDB.
-5. Number of Movies Over Time: This visualization helps to identify the years which gave us the most popular movies and tv serieses.
+4. Rating Distribution in Movies and TV series: This visualization shows the distribution of ratings of the most popular titles on the IMDB.
+5. Number of Movies Over Time: This visualization helps to identify the years which gave us the most popular movies and tv series.
 
 ## Conclusion
 
-This project provides a brief analysis of the most acclaimed movies and TV serieses. The visualizations and dashboard created in Tableau can be used to explore the data and gain a deeper understanding of people's interest, evolution of movies.
+This project provides a brief analysis of the most acclaimed movies and TV series. The visualizations and dashboard created in Tableau can be used to explore the data and gain a deeper understanding of people's interest, evolution of movies.
