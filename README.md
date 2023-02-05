@@ -1,4 +1,4 @@
-# IMDB-Populars-Data-Analysis
+# Scraping, Cleaning, Processing, and Visualizing Movie Data
 
 ## Overview
 
