@@ -1,4 +1,4 @@
-# IMDB-Data-Analysis
+# IMDB-Populars-Data-Analysis
 
 ## Overview
 
