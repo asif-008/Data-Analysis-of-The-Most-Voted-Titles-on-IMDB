@@ -22,7 +22,7 @@ For the visualization, only two table were needed. these two table was copied in
 
 ## Data Analysis
 
-Tableau was used to create five different visualizations and a dashboard. The following is a description of each visualization:
+Tableau was used to create [five different visualizations and a dashboard](https://public.tableau.com/views/Popularmoviesandtvseries/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link). The following is a description of each visualization:
 
 1. Number of Movies and TV Series: This visualization shows the count of movies and TV series in the data.
 2. Genres and their Percentage: This visualization shows the  genres presented in the data and their percentage values.
