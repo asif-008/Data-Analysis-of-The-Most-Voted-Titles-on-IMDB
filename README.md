@@ -1,10 +1,12 @@
-# How do ratings differ among IMDb's most-voted movies and TV series?
+# Exploring genres, ratings and release years across 2,500 IMDb titles
 
-[Explore the interactive Tableau dashboard](https://public.tableau.com/views/Popularmoviesandtvseries/Dashboard1)
+Which genres appear most often among movies and TV series with at least 100,000 IMDb votes? Drama leads this sample, followed by action and comedy. A title can appear in several genres. The vote threshold tells us which titles qualified; the dataset contains no viewing counts.
 
-The saved dataset contains **2,500 titles** from an IMDb search with a **100,000-vote minimum**. Each title counts once in the comparisons below. The vote threshold selects widely rated titles, so these results describe this snapshot of popular titles.
+[![Tableau dashboard showing genre frequency, average ratings for five popular genres, the distribution of title ratings, and the number of titles by release year.](https://public.tableau.com/static/images/Po/Popularmoviesandtvseries/Dashboard1/1.png)](https://public.tableau.com/views/Popularmoviesandtvseries/Dashboard1)
 
-![Median IMDb ratings on a ten-point scale. Movies 7.1 and TV series 8.4.](ratings-preview.svg)
+[Open the interactive Tableau dashboard](https://public.tableau.com/views/Popularmoviesandtvseries/Dashboard1) to explore the charts using the genre and category filters.
+
+## Movies and TV series in the sample
 
 | Category in the workbook | Titles | Share of sample | Median IMDb rating |
 |---|---:|---:|---:|
