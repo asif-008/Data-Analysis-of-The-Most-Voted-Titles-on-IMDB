@@ -1,35 +1,24 @@
-# Data Analysis of The Most Voted Titles on IMDB
+# How do ratings differ among IMDb's most-voted movies and TV series?
 
-## Overview
+[Explore the interactive Tableau dashboard](https://public.tableau.com/views/Popularmoviesandtvseries/Dashboard1)
 
-A data visualization and analysis project on the movies and tv series with more than 100,000 votes on the IMDB website. 
+The saved dataset contains **2,500 titles** from an IMDb search with a **100,000-vote minimum**. Each title counts once in the comparisons below. The vote threshold selects widely rated titles, so these results describe this snapshot of popular titles.
 
-## Data Collection
+![Median IMDb ratings on a ten-point scale. Movies 7.1 and TV series 8.4.](ratings-preview.svg)
 
-The data was collected by scraping the website using a Python script. The resulting data format consisted of the following columns: title, year, IMDB rating, number of votes, and genres.
+| Category in the workbook | Titles | Share of sample | Median IMDb rating |
+|---|---:|---:|---:|
+| Movie | 2,264 | 90.56% | 7.1 |
+| TV series | 236 | 9.44% | 8.4 |
 
-## Data Cleaning
+Movies account for roughly nine in ten titles. The smaller TV series group has a median rating **1.3 points higher**. These are title-level medians, with equal weight for each title regardless of its vote count.
 
-Data of the 'year' column had roman characters, brackets which was cleaned by using excel formulas.
+## Explore the data
 
-## Data Processing
+- The [Tableau workbook input](imdb_populars_tableau.xlsx) has two sheets. To reproduce the table above, group **rating and year** by category, count its rows and take the median of **IMDb Rating**. The **genre** sheet contains multiple rows for titles with multiple genres.
+- The [source workbook](imdb_populars_main_source.xlsx) includes the collected titles, ratings, vote counts and intermediate cleaning steps. Excel formulas cleaned the year text and separated start and end years. The project uses the title and vote count together to identify each title in this snapshot.
+- The [SQL file](IMDB_populars.sql) documents the transformation into title–genre rows. The dashboard explores genre representation, ratings and release years.
 
-The data of the 'year' column was broken up into two columns - beginning year and ending year, to separate movie and TV series data. A column named 'category' was added to show if the object is a movie or tv series. The 'genres' column was broken up into separate columns, each containing name of one genre. A separate sheet was created with the data format of (title, vote, genre). The title-vote pair was used as the unique key after verifying that they were all unique. SQL was used to generate the new table.
+## Collection script
 
-## Data Preparation
-
-For the visualization, only two table were needed. these two table was copied in a new excel file in different sheets.
-
-## Data Analysis
-
-Tableau was used to create [five different visualizations and a dashboard](https://public.tableau.com/views/Popularmoviesandtvseries/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link). The following is a description of each visualization:
-
-1. Number of Movies and TV Series: This visualization shows the count of movies and TV series in the data.
-2. Genres and their Percentage: This visualization shows the  genres presented in the data and their percentage values.
-3. Comparison of Ratings Among Popular Genres: This visualization compares the ratings of the most popular genres in the data.
-4. Rating Distribution in Movies and TV series: This visualization shows the distribution of ratings of the most popular titles on the IMDB.
-5. Number of Movies Over Time: This visualization helps to identify the years which gave us the most popular movies and tv series.
-
-## Conclusion
-
-This project provides a brief analysis of the most acclaimed movies and TV series. The visualizations and dashboard created in Tableau can be used to explore the data and gain a deeper understanding of people's interest, evolution of movies.
+The original [Python scraper](moviesandtv.py) targets the IMDb search-result layout used for this snapshot. With requests, Beautiful Soup, pandas and openpyxl installed, run `python moviesandtv.py` to attempt a fresh collection. It writes `imdb_titles.xlsx` in the working directory. Missing rating elements produce blank cells. An HTTP error or a page with no matching listings stops the export. The saved workbooks allow the analysis to be reproduced independently of IMDb's current layout.
